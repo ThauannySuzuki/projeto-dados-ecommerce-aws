@@ -1,0 +1,9 @@
+status_pedido,pedidos,receita,pct_receita
+delivered,96477,15422461.77,96.34
+shipped,1107,177213.96,1.11
+canceled,622,143255.6,0.89
+unavailable,609,126479.51,0.79
+processing,301,69394.11,0.43
+invoiced,314,69137.99,0.43
+created,5,688.1,0.0
+approved,2,241.08,0.0

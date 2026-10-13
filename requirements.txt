@@ -1,0 +1,3 @@
+pandas>=2.0
+# opcional: habilita saída em Parquet (formato usado no Glue/Athena)
+pyarrow>=14.0
