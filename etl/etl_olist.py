@@ -7,14 +7,6 @@ ETL local da base Olist  (equivalente ao job do AWS Glue do projeto)
 Uso:
     python etl/etl_olist.py --raw data/raw --out data
 
-Camadas
-  raw    : os 9 CSVs originais, sem alteração (no projeto, ficariam no S3)
-  silver : cada tabela limpa (tipos, texto padronizado, duplicados, tradução de categorias)
-  gold   : tabelas analíticas do dashboard "Visão Financeira e Comportamento de Pagamentos"
-             - gold_pagamentos : 1 linha por pagamento
-             - gold_pedidos    : 1 linha por pedido (receita, parcelas, flag de cartão)
-
-Também gera docs/relatorio_qualidade.md com contagens, regras aplicadas e conciliação.
 """
 import argparse
 from pathlib import Path
@@ -39,8 +31,8 @@ ARQUIVOS = {
     "translation": "product_category_name_translation.csv",
 }
 
-report = []   # regras de limpeza aplicadas (vão para o relatório)
-stats = []    # (tabela, linhas_raw, linhas_silver)
+report = []   
+stats = []    
 
 
 def log(msg=""):
